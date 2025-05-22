@@ -1,0 +1,22 @@
+{
+    "nombre_cliente": "Pedro Pablo Camacho Prada",
+    "codigo": "20250522_PPCP",
+    "fecha": "2025-05-22",
+    "hora": "22:00:26",
+    "adelanto": 0,
+    "articulos": [
+        {
+            "tipo": "puertas",
+            "modelo": "puerta_abatible2.png",
+            "cantidad": 5,
+            "costo_unitario": 20000,
+            "costo_total": 100000,
+            "entregado": false,
+            "medidas": {
+                "ancho": "150",
+                "altura": "120",
+                "color": "blanco"
+            }
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "nombre_cliente": "Teresa Garcia Diaz",
+    "codigo": "20250522_TGD",
+    "fecha": "2025-05-22",
+    "hora": "21:54:38",
+    "adelanto": 0,
+    "articulos": [
+        {
+            "tipo": "ventanas",
+            "modelo": "guillotina.png",
+            "cantidad": 10,
+            "costo_unitario": 2000,
+            "costo_total": 20000,
+            "entregado": false,
+            "medidas": {
+                "ancho": "100",
+                "altura": "120",
+                "color": "blanco"
+            }
+        }
+    ]
+}

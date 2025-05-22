@@ -1,0 +1,22 @@
+{
+    "nombre_cliente": "Diego Gonzalez Buitrago",
+    "codigo": "20250522_DGB",
+    "fecha": "2025-05-22",
+    "hora": "21:51:25",
+    "adelanto": 0,
+    "articulos": [
+        {
+            "tipo": "puertas",
+            "modelo": "Puerta_abatible.png",
+            "cantidad": 10,
+            "costo_unitario": 5000,
+            "costo_total": 50000,
+            "entregado": false,
+            "medidas": {
+                "ancho": "100",
+                "altura": "120",
+                "color": "blanco"
+            }
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Diseño de Casa</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <a onclick="mostrar('puertas')">🚪 Puertas</a>
+        <a onclick="mostrar('ventanas')">🪟 Ventanas</a>
+        <a onclick="verPedidos()">📂 Ver Pedidos</a>
+        <a onclick="guardarHistorial()">💾 Guardar Historial</a>
+        <a href="/logout">🔓 Cerrar Sesión</a> <!-- NUEVO -->
+    </div>
+
+    <div class="main-content" id="contenido">
+        <h1>Bienvenido al diseño de tu casa</h1>
+        <p>Selecciona una opción del menú.</p>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
