@@ -25,7 +25,7 @@ def login():
     if request.method == 'POST':
         usuario = request.form['usuario']
         clave = request.form['clave']
-        if usuario == 'window' and clave == '1234*':
+        if usuario == 'admin' and clave == '1234':
             session['usuario'] = usuario
             return redirect(url_for('index'))
         return render_template('login.html', error='Credenciales incorrectas')
@@ -131,6 +131,20 @@ def cargar_historial():
                 historial.append(pedido)
     return jsonify(historial)
 
+@app.route('/eliminar_pedido/<codigo>', methods=['POST'])
+@login_requerido
+def eliminar_pedido(codigo):
+    archivo_json = os.path.join("clientes", f"{codigo}.json")
+    archivo_pdf = os.path.join("clientes", f"{codigo}.pdf")
+
+    if os.path.exists(archivo_json):
+        os.remove(archivo_json)
+    if os.path.exists(archivo_pdf):
+        os.remove(archivo_pdf)
+
+    return jsonify({"status": "ok", "mensaje": f"Pedido {codigo} eliminado correctamente."})
+
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5050))
     app.run(debug=True, host='0.0.0.0', port=port)
+
