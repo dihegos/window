@@ -114,3 +114,24 @@ th {
     text-decoration: underline;
 }
 
+/* Estilo específico para el botón de eliminar */
+button.eliminar {
+    background-color: #e74c3c;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.eliminar:hover {
+    background-color: #c0392b;
+    transform: scale(1.03);
+}
