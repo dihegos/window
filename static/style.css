@@ -24,6 +24,7 @@ body {
     border-radius: 5px;
     background-color: #34495e;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .sidebar a:hover {
@@ -80,18 +81,45 @@ button {
     cursor: pointer;
     width: 100%;
     border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
     background-color: #16a085;
+    transform: scale(1.03);
 }
 
+/* Botón específico de eliminar */
+button.eliminar {
+    background-color: #e74c3c;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: auto;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.eliminar:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Mensajes */
 #mensaje {
     margin-top: 15px;
     font-size: 16px;
+    color: green;
 }
 
-/* Tabla */
+/* Tabla de pedidos */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -114,24 +142,6 @@ th {
     text-decoration: underline;
 }
 
-/* Estilo específico para el botón de eliminar */
-button.eliminar {
-    background-color: #e74c3c;
-    color: white;
-    font-weight: bold;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button.eliminar:hover {
-    background-color: #c0392b;
-    transform: scale(1.03);
+.pedido-link:hover {
+    color: #1abc9c;
 }
