@@ -154,7 +154,7 @@ function verDetalle(codigo) {
         <button onclick="verPedidos()">⬅️ Volver a pedidos</button>
         <button onclick="imprimirPedido('${codigo}')">🖨️ Imprimir PDF</button>
         <button onclick="guardarPedidoComoJSON('${codigo}')">💾 Guardar Pedido</button>
-        <button onclick="eliminarPedido('${codigo}')" style="background-color:#e74c3c; color:white;">🗑️ Eliminar Pedido</button>
+        <button class="eliminar" onclick="eliminarPedido('${codigo}')">🗑️ Eliminar Pedido</button>
     `;
 
     document.getElementById('contenido').innerHTML = html;
@@ -215,9 +215,7 @@ function guardarPedidoComoJSON(codigo) {
 function eliminarPedido(codigo) {
     if (!confirm(`¿Estás seguro de eliminar el pedido ${codigo}? Esta acción no se puede deshacer.`)) return;
 
-    fetch(`/eliminar_pedido/${codigo}`, {
-        method: 'POST'
-    })
+    fetch(`/eliminar_pedido/${codigo}`, { method: 'POST' })
     .then(res => res.json())
     .then(data => {
         alert(data.mensaje);
